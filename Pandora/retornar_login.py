@@ -9,11 +9,11 @@ def janela_de_login_1(janela_sucesso,):
 
         #criação da janelafazer login
         ctk.set_appearance_mode("dark")
-        janela = ctk.CTk()
-        janela.title("Faça login no Pandora")
-        janela.geometry("520x560")
-        janela.config(background="#0F0F0F")
-        janela.resizable(
+        janela_3 = ctk.CTk()
+        janela_3.title("Faça login no Pandora")
+        janela_3.geometry("520x560")
+        janela_3.config(background="#020202")
+        janela_3.resizable(
             width= False,
             height= False
         )
@@ -24,9 +24,9 @@ def janela_de_login_1(janela_sucesso,):
         #  
         #label de texto login
         texto_login = ctk.CTkLabel(
-            janela,
+            janela_3,
             text= "Faça login no Pandora",
-            bg_color="#0F0F0F",
+            bg_color="#020202",
             font = ctk.CTkFont(
                 "DjaVu Sans",
                 20,
@@ -39,9 +39,9 @@ def janela_de_login_1(janela_sucesso,):
 
         #label de nome e email
         texto_login_1 = ctk.CTkLabel(
-            janela,
+            janela_3,
             text= "Nome de usuário ou endereço de e-mail",
-            bg_color="#0F0F0F",
+            bg_color="#020202",
             font = ctk.CTkFont(
                 "DjaVu Sans",
                 12,
@@ -54,21 +54,21 @@ def janela_de_login_1(janela_sucesso,):
         )
         #entry de nome e e-mail
         caixa_de_nome = CTkEntry(
-            janela,
+            janela_3,
             corner_radius=10,
             width= 410,
             height= 45,
-            bg_color="#0F0F0F",
-            fg_color="#0F0F0F"
+            bg_color="#020202",
+            fg_color="#020202"
         )
         caixa_de_nome.pack(
             pady= 0
         )
         #label DE TEXTO DE SENHA
         texto_login_2 = ctk.CTkLabel(
-            janela,
+            janela_3,
             text= "Senha",
-            bg_color="#0F0F0F",
+            bg_color="#020202",
             font = ctk.CTkFont(
                 "DjaVu Sans",
                 12,
@@ -81,13 +81,13 @@ def janela_de_login_1(janela_sucesso,):
         )
         #entry
         caixa_de_nome_1 = CTkEntry(
-            janela,
+            janela_3,
             show = "*",
             corner_radius=10,
             width= 410,
             height= 45,
-            bg_color="#0F0F0F",
-            fg_color="#0F0F0F"
+            bg_color="#020202",
+            fg_color="#020202"
         )
         caixa_de_nome_1.pack(
             pady= 40
@@ -95,9 +95,9 @@ def janela_de_login_1(janela_sucesso,):
 
         #botão criar uma conta
         botao_conta = ctk.CTkButton(
-            janela,
-            bg_color = "#0F0F0F",
-            fg_color = "#0F0F0F",
+            janela_3,
+            bg_color = "#020202",
+            fg_color = "#020202",
             text_color = "#4242E7",
             text = "Crie uma conta.",
             hover = None,
@@ -105,7 +105,7 @@ def janela_de_login_1(janela_sucesso,):
                 "DejaVu Sans",
                 12,
             ),
-            command=lambda:criar_conta(janela)
+            command=lambda:criar_conta(janela_3)
         )
         botao_conta.place(
             x=245,
@@ -114,8 +114,8 @@ def janela_de_login_1(janela_sucesso,):
 
         #label é novo no pandora?
         texto_login_3 = ctk.CTkLabel(
-            janela,
-            bg_color = "#0F0F0F",
+            janela_3,
+            bg_color = "#020202",
             text="É novo no Pandora?",
             font= ctk.CTkFont(
                 "DejaVu Sans",
@@ -146,13 +146,13 @@ def janela_de_login_1(janela_sucesso,):
             conexao.close()
 
             if resultado:
-                janela.destroy()
+                janela_3.destroy()
 
                 ctk.set_appearance_mode("dark")
                 janela_sucesso_login = ctk.CTk()
                 janela_sucesso_login.title("Sucesso")
                 janela_sucesso_login.geometry("400x300")
-                janela_sucesso_login.config(background="#0F0F0F")
+                janela_sucesso_login.config(background="#020202")
                 janela_sucesso_login.resizable(
                     width= False,
                     height= False
@@ -160,7 +160,7 @@ def janela_de_login_1(janela_sucesso,):
 
                 texto = ctk.CTkLabel(
                         janela_sucesso_login,
-                        bg_color="#0F0F0F",
+                        bg_color="#020202",
                         text="login realizado com sucesso!",
                         font=ctk.CTkFont(
                             "DejaVu Sans",
@@ -185,16 +185,16 @@ def janela_de_login_1(janela_sucesso,):
 
             else:
                 erro = ctk.CTkLabel(
-                janela,
+                janela_3,
                 text="Usuário ou senha incorretos!",
-                bg_color="#0F0F0F",
+                bg_color="#020202",
                 text_color="red"
             )
             erro.place(x=170, y=420)
 
         #botao de entrar
         botao_entrar = ctk.CTkButton(
-            janela,
+            janela_3,
             corner_radius=10,
             text = "Entrar",
             command= fazer_login,
@@ -205,11 +205,11 @@ def janela_de_login_1(janela_sucesso,):
             ),
             width= 410,
             height= 45,
-            bg_color="#0F0F0F",
+            bg_color="#020202",
             fg_color ="#3F812F",
             hover_color = "#356D28",
         )
         botao_entrar.pack(
             pady=0
         )
-        janela.mainloop()
+        janela_3.mainloop()

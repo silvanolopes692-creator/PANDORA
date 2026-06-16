@@ -17,7 +17,7 @@ def criar_conta(janela):
     janela_2 = ctk.CTk()
     janela_2.title("Cadastre-se no Pandora")
     janela_2.geometry("520x560")
-    janela_2.config(background="#0F0F0F")
+    janela_2.config(background="#020202")
     janela_2.resizable(
             width=False,
             height=False
@@ -26,8 +26,8 @@ def criar_conta(janela):
     frame_1 = ctk.CTkFrame(
      janela_2,
     corner_radius= 20,
-    fg_color="#111111",
-     bg_color="#0F0F0F",
+    fg_color="#020202",
+     bg_color="#020202",
     width=500,
     height=540
     )
@@ -38,7 +38,7 @@ def criar_conta(janela):
     texto_conta = ctk.CTkLabel(
             frame_1,
             text= "Cadastre-se no Pandora!",
-            bg_color="#111111",
+            bg_color="#020202",
             font= ctk.CTkFont(
                     "DejaVu Sans",
                     20,
@@ -53,7 +53,7 @@ def criar_conta(janela):
 
     texto_usuario = ctk.CTkLabel(
             frame_1,
-            text= "Digite seu usuario",
+            text= "Digite seu usuário",
             font= ctk.CTkFont(
                     "DejaVu Sans",
                     10,
@@ -100,8 +100,8 @@ def criar_conta(janela):
             corner_radius=10,
             width= 410,
             height= 45,
-            bg_color="#111111",
-            fg_color="#111111"
+            bg_color="#020202",
+            fg_color="#020202"
     )
     caixa_de_usuario.place(
             x=45,
@@ -114,8 +114,8 @@ def criar_conta(janela):
             corner_radius=10,
             width= 410,
             height= 45,
-            bg_color="#111111",
-            fg_color="#111111"
+            bg_color="#020202",
+            fg_color="#020202"
     )
     caixa_de_email.place(
             x=45,
@@ -127,8 +127,8 @@ def criar_conta(janela):
             corner_radius=10,
             width= 410,
             height= 45,
-            bg_color="#111111",
-            fg_color="#111111"
+            bg_color="#020202",
+            fg_color="#020202"
     )
     caixa_de_senha.place(
             x=45,
@@ -166,7 +166,7 @@ def criar_conta(janela):
         janela_sucesso = ctk.CTk()
         janela_sucesso.title("Sucesso")
         janela_sucesso.geometry("400x300")
-        janela_sucesso.config(background="#0F0F0F")
+        janela_sucesso.config(background="#020202")
         janela_sucesso.resizable(
                     width= False,
                     height= False
@@ -174,7 +174,7 @@ def criar_conta(janela):
 
         texto = ctk.CTkLabel(
                 janela_sucesso,
-                bg_color="#0F0F0F",
+                bg_color="#020202",
                 text="Conta criada com sucesso!",
                 font=ctk.CTkFont(
                     "DejaVu Sans",
@@ -205,7 +205,7 @@ def criar_conta(janela):
             height= 45,
             text = "Cadastrar",
             command= salvar,
-            bg_color="#111111",
+            bg_color="#020202",
             fg_color ="#3F812F",
             hover_color="#356D28"
     )
